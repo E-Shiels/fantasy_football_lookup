@@ -21,7 +21,7 @@ class CLI
     elsif input == 'explain'
       puts 'EXPLANATION'
     elsif input == 'exit'
-     puts "Thank you for using the FantasyFootballLookup Ruby CLI gem. The data was scraped from https://www.fantasypros.com/. \nYou can checkout the gem source code at https://github.com/E-Shiels/fantasy_football_lookup. "
+     puts "Thank you for using the FantasyFootballLookup Ruby CLI gem. The data was scraped from https://www.fantasypros.com/. \nYou can view the gem source code at https://github.com/E-Shiels/fantasy_football_lookup. "
     else
       puts 'I am not sure what you want to do. Please try again.'
     end
