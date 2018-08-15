@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.email         = ["'ericshielsbusiness@gmail.com'"]
 
   spec.summary       = "FantasyFootballLookup is a CLI that accesses the fantasy football rankings at data found at FantasyPros.com."
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/E-Shiels/fantasy_football_lookup"
   spec.license       = "MIT"
 
@@ -38,4 +37,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "nokogiri"
   spec.add_dependency "tty-prompt"
+  spec.add_dependency "open-uri"
 end
