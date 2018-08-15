@@ -1,5 +1,7 @@
 require "fantasy_football_lookup/version"
+require "fantasy_football_lookup/cli"
+require "fantasy_football_lookup/player"
 
-module FantasyFootballLookup
-  # Your code goes here...
-end
+require "open-uri"
+require "nokogiri"
+require "pry"
