@@ -34,5 +34,3 @@ def self.find_player(player_search_input)
 end
 
 end
-
-Player.scrape_players

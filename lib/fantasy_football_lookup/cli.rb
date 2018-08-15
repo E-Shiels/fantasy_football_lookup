@@ -1,5 +1,6 @@
 class CLI
   def call
+    Player.scrape_players
     welcome
     menu
   end
