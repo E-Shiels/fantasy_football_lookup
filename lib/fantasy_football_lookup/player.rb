@@ -11,7 +11,7 @@ player = self.new
 
 end
 
-def self.find_player
+def self.find_player(player_search_input)
 
 end
 
