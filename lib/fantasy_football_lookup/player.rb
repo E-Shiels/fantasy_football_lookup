@@ -11,13 +11,12 @@ doc.css("tr.player-row").each do |player_row|
   player = self.new
   tds = [] 
     player_row.css("td").each do |td|
-      binding.pry
       tds << td
-      
     end
+        binding.pry
       player.name = "TESTING"
-      player.team = "TESTING"
-      player.position = "TESTING"
+      player.team = tds[1].children.to_s.scan(/[A-Z]{2,3}/)[0]
+      player.position = tds[1].children.to_s.scan(/[A-Z]{2,3}/)[1]
       player.bye_week = tds[4].text
       player.rank = "TESTING"
       player.position_rank = tds[3].text 
