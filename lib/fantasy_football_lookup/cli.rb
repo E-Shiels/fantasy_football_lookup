@@ -30,6 +30,3 @@ class CLI
   end
 
 end
-
-cli = CLI.new
-cli.call

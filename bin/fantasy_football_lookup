@@ -3,4 +3,4 @@
 require "bundler/setup"
 require "fantasy_football_lookup"
 
-FantaasyFootballLookup::CLI.new.call
+FantasyFootballLookup::CLI.new.call
