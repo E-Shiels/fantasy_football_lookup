@@ -17,8 +17,13 @@ class CLI
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts "Type top-25, top-50, top-100, or top-all to see a list of the top ranked players. \nTo search for a specific player, type search and press enter. Then, type the players name and press enter again. \nType explain for an explanation of the information presented in this program. \nTo exit, type exit"
     input = gets.strip
-    if input == 'top-25' || input == 'top-50' || input == 'top-100' || input == 'top-all'
-      puts 'This worked!'
+    if input == 'top-25' || input == 'top-50' || input == 'top-100'
+        n = input.gsub("top-", "")
+        Player.all.first(n).each do |player|
+
+        end
+    elsif input == "top-all"
+
     elsif input == 'search'
       puts 'Please enter the name of the player you would like to search for:'
       player_search_input = gets.strip

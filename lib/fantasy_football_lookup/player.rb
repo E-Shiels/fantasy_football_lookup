@@ -35,4 +35,8 @@ def self.find_player(player_search_input)
   end
 end
 
+def self.all
+  @@players
+end
+
 end
