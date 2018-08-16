@@ -26,7 +26,12 @@ class CLI
           puts "Average Rank: #{player.average_rank} | Average Draft Position: #{player.average_draft_position} | Average Draft Position vs. Rank: #{player.adp_vs_rank}"
         end
     elsif input == "top-all"
-
+      Player.all.each do |player|
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "Name: #{player.name} | Team: #{player.team} | Position: #{player.position} | Bye Week: #{player.bye_week}"
+        puts "Rank: #{player.rank} | Position Rank: #{player.position_rank} | Best Rank: #{player.best_rank} | Worst Rank: #{player.worst_rank}"
+        puts "Average Rank: #{player.average_rank} | Average Draft Position: #{player.average_draft_position} | Average Draft Position vs. Rank: #{player.adp_vs_rank}"
+      end
     elsif input == 'search'
       puts 'Please enter the name of the player you would like to search for:'
       player_search_input = gets.strip
@@ -40,8 +45,10 @@ class CLI
       puts "Average Rank: #{@search_results[0].average_rank} | Average Draft Position: #{@search_results[0].average_draft_position} | Average Draft Position vs. Rank: #{@search_results[0].adp_vs_rank}"
     end
     elsif input == 'explain'
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       puts "A players rank is their overall rank. A players position rank is their ranking in their position. RB12 means that player is the 12th highest-ranked running back.\nA player doesnt play during their teams bye week.\nAverage Draft Pick is the pick when a player is selected on average and is aggregated from a number of sources.\nRank vs. Average Draft Position compares the players consensus rank to their average draft pick.\n+3 means that a player is ranked 3 positions above their average draft pick. -5 means that a player is ranked 5 positions below their average draft pick."
     elsif input == 'exit'
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
      puts "Thank you for using the FantasyFootballLookup Ruby CLI gem. The data was scraped from https://www.fantasypros.com/. \nYou can view the gem source code at https://github.com/E-Shiels/fantasy_football_lookup. "
     else
       puts 'I am not sure what you want to do. Please try again.'
