@@ -1,4 +1,5 @@
 require_relative "./player.rb"
+require "pry"
 class CLI
   def call
     Player.scrape_players
@@ -20,8 +21,16 @@ class CLI
       puts 'This worked!'
     elsif input == 'search'
       puts 'Please enter the name of the player you would like to search for:'
-      player_search_input == gets.strip
-      Player.find_player(player_search_input)
+      player_search_input = gets.strip
+      @search_results = Player.find_player(player_search_input)
+      if @search_results == nil
+        puts "There is no player matching your search input. Please type search and try again."
+      else
+      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+      puts "Name: #{@search_results[0].name} | Team: #{@search_results[0].team} | Position: #{@search_results[0].position} | Bye Week: #{@search_results[0].bye_week}"
+      puts "Rank: #{@search_results[0].rank} | Position Rank: #{@search_results[0].position_rank} | Best Rank: #{@search_results[0].best_rank} | Worst Rank: #{@search_results[0].worst_rank}"
+      puts "Average Rank: #{@search_results[0].average_rank} | Average Draft Position: #{@search_results[0].average_draft_position} | Average Draft Position vs. Rank: #{@search_results[0].adp_vs_rank}"
+    end
     elsif input == 'explain'
       puts "A players rank is their overall rank. A players position rank is their ranking in their position. RB12 means that player is the 12th highest-ranked running back.\nA player doesnt play during their teams bye week.\nAverage Draft Pick is the pick when a player is selected on average and is aggregated from a number of sources.\nRank vs. Average Draft Position compares the players consensus rank to their average draft pick.\n+3 means that a player is ranked 3 positions above their average draft pick. -5 means that a player is ranked 5 positions below their average draft pick."
     elsif input == 'exit'
