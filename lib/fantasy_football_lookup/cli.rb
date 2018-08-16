@@ -19,7 +19,9 @@ class CLI
     if input == 'top-25' || input == 'top-50' || input == 'top-100' || input == 'top-all'
       puts 'This worked!'
     elsif input == 'search'
-      puts 'This worked too!'
+      puts 'Please enter the name of the player you would like to search for:'
+      player_search_input == gets.strip
+      Player.find_player(player_search_input)
     elsif input == 'explain'
       puts "A players rank is their overall rank. A players position rank is their ranking in their position. RB12 means that player is the 12th highest-ranked running back.\nA player doesnt play during their teams bye week.\nAverage Draft Pick is the pick when a player is selected on average and is aggregated from a number of sources.\nRank vs. Average Draft Position compares the players consensus rank to their average draft pick.\n+3 means that a player is ranked 3 positions above their average draft pick. -5 means that a player is ranked 5 positions below their average draft pick."
     elsif input == 'exit'
