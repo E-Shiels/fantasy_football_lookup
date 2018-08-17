@@ -4,19 +4,7 @@ FantasyFootballLookup is a CLI that accesses the fantasy football rankings at da
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'fantasy_football_lookup'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install fantasy_football_lookup
+At the moment, the only way to install this program is to clone down the GitHub repository. You can do this by typing "git clone git@github.com:E-Shiels/fantasy_football_lookup.git" into the terminal.
 
 ## Usage
 
