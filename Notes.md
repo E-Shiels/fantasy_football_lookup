@@ -1,14 +1,22 @@
-Bundler docs for making a gem- https://bundler.io/v1.12/guides/creating_gem.html
+Bundler docs for making a gem - https://bundler.io/v1.12/guides/creating_gem.html
+
 The sandbox that I am supposed to use - https://learn.co/tracks/full-stack-web-development-v5/intro-to-ruby-development/command-line-applications/cli-applications-in-ruby
+
 IDE setup - https://www.youtube.com/watch?time_continue=317&v=YZNXWWHUO-E
+
 Gem docs - https://guides.rubygems.org/what-is-a-gem/ - https://guides.rubygems.org/make-your-own-gem/
+
 Info on CLIs - https://github.com/learn-co-curriculum/cli-interfaces-readme#program-loop
+
 Student scraper lesson - https://learn.co/tracks/full-stack-web-development-v5/object-oriented-ruby/final-projects/student-scraper
+
 Scraping lesson - https://learn.co/tracks/full-stack-web-development-v5/object-oriented-ruby/scraping/scraping
+
 Ruby CLI lesson - https://learn.co/tracks/full-stack-web-development-v5/intro-to-ruby-development/command-line-applications/cli-applications-in-ruby
 
-Project Requirements:
-Provide a CLI that provides access to data from a web page. 
+
+# Project Requirements: #
+Provide a CLI that provides access to data from a web page.
 It must go at least one-level deep. A "level" is where a user can make a choice and then get detailed information about their choice. Some examples are below:
 Movies opening soon - Enter your zip code and receive a list of movies and their details.
 Libraries near you - Enter your zip code and receive a list of libraries and their details.
@@ -17,7 +25,7 @@ News reader - List articles and read an article of your choosing.
 Your CLI application should not be too similiar to the Ruby final projects (Music Library CLI, Tic-Tac-Toe with AI, Student Scraper). Also, please refrain from using Kickstarter as that was used for the scraping 'code along'.
 Use good OO design patterns. You should be creating a collection of objects, not hashes, to store your data. Pro Tip: Avoid scraping data more than once per web page - utilize objects you have already created. It will speed up your program!
 
-Instructions
+# Instructions #
 1.	Watch this video walkthrough of building a basic CLI Gem called Daily Deal before you begin. Review the Student Scraper Project, which provides a good example of how scraping concerns can be separated into a distinct class.
 2.	Build your application. This is going to be different from labs you have done on Learn. Do not click Open IDE and create your application within the lesson files. Instead:
 Watch this video on how to create and continue your project in the IDE In Browser
@@ -34,11 +42,12 @@ Prepare a video demo (narration helps!) describing how a user would interact wit
 Write a blog post about the project and process.
 	On Learn, submit links to the GitHub repository for your app, your video demo (not 	your 30-minute coding session), and your blog post each to the corresponding 	textbox in the right rail, and hit "I'm done" to wrap it up.
 
+
 Fantasy_Football_Lookup is a Ruby gem that provides access to Fantasy Pros football rankings and data.
 
 Gem puts intro message and lists options to input.
 
-User types "top-25" || "top-50" || "top-100" || "top-all"
+**User types** "top-25" || "top-50" || "top-100" || "top-all"
 
 Returns:
 Name:
@@ -53,18 +62,18 @@ Average Rank:
 Average Draft Position:
 Average Draft Position vs. Rank:
 
-User types "player("Player name")"
+**User types** "player("Player name")"
 
 Returns same information as when returning top player information, but just the info about the player selected.
 
-User types "explain"
+**User types** "explain"
 
 Puts info regarding average draft pick, source, and adp vs rank.
 
-User types "help"
+**User types** "help"
 
 Returns list of commands.
 
-User types"quit"
+**User types**"quit"
 
 Quits CLI.
