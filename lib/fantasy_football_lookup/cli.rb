@@ -36,7 +36,7 @@ class CLI
       puts 'Please enter the name of the player you would like to search for:'
       player_search_input = gets.strip
       @search_results = Player.find_player(player_search_input)
-      if @search_results == nil
+      if @search_results.empty? 
         puts "There is no player matching your search input. Please type search and try again."
       else
       puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
