@@ -30,7 +30,7 @@ end
 end
 
 def self.find_player(player_search_input)
-  @@players.select do |player|
+  self.all.select do |player|
     player.name == player_search_input
   end
 end
