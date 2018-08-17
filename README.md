@@ -1,7 +1,5 @@
 # FantasyFootballLookup
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fantasy_football_lookup`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 FantasyFootballLookup is a CLI that accesses the fantasy football rankings at data found at FantasyPros.com.
 
 ## Installation
@@ -22,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Once you have cloned down this repository, cd into fantasy_football_lookup and type ./bin/fantasy_football_lookup.
+
+Type top-25, top-50, top-100, or top-all to see a list of the top ranked players. To search for a specific player, type search and press enter. Then, type the players name and press enter again. Type explain for an explanation of the information presented in this program. To exit, type exit"
 
 ## Development
 
