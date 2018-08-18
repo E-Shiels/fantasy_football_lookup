@@ -29,6 +29,12 @@ end
 @@players
 end
 
+def self.check_for_player(player_search_input)
+  self.all.detect do |player|
+    player.name == player_search_input
+  end
+end
+
 def self.find_player(player_search_input)
   self.all.select do |player|
     player.name == player_search_input
