@@ -1,20 +1,3 @@
-Bundler docs for making a gem - https://bundler.io/v1.12/guides/creating_gem.html
-
-The sandbox that I am supposed to use - https://learn.co/tracks/full-stack-web-development-v5/intro-to-ruby-development/command-line-applications/cli-applications-in-ruby
-
-IDE setup - https://www.youtube.com/watch?time_continue=317&v=YZNXWWHUO-E
-
-Gem docs - https://guides.rubygems.org/what-is-a-gem/ - https://guides.rubygems.org/make-your-own-gem/
-
-Info on CLIs - https://github.com/learn-co-curriculum/cli-interfaces-readme#program-loop
-
-Student scraper lesson - https://learn.co/tracks/full-stack-web-development-v5/object-oriented-ruby/final-projects/student-scraper
-
-Scraping lesson - https://learn.co/tracks/full-stack-web-development-v5/object-oriented-ruby/scraping/scraping
-
-Ruby CLI lesson - https://learn.co/tracks/full-stack-web-development-v5/intro-to-ruby-development/command-line-applications/cli-applications-in-ruby
-
-
 # Project Requirements: #
 Provide a CLI that provides access to data from a web page.
 It must go at least one-level deep. A "level" is where a user can make a choice and then get detailed information about their choice. Some examples are below:
