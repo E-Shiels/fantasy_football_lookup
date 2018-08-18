@@ -29,9 +29,11 @@ end
 @@players
 end
 
-def self.check_for_player(player_search_input)
-  self.all.detect do |player|
-    player.name == player_search_input
+def self.player_exists?(player_search_input)
+  if self.all.detect { |player| player.name == player_search_input }
+    return true
+  else
+    return false
   end
 end
 
