@@ -1,5 +1,4 @@
 require_relative "./player.rb"
-require "pastel"
 class CLI
   def call
     Player.scrape_players

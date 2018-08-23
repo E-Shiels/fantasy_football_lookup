@@ -1,6 +1,6 @@
 # FantasyFootballLookup
 
-FantasyFootballLookup is a CLI that accesses the fantasy football rankings at data found at FantasyPros.com.
+FantasyFootballLookup is a Ruby CLI that accesses the fantasy football rankings at data found at FantasyPros.com.
 
 ## Installation
 
