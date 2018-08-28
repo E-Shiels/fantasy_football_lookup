@@ -10,11 +10,7 @@ def initialize
 end
 
 def self.player_exists?(player_search_input)
-  if self.all.detect { |player| player.name == player_search_input }
-    return true
-  else
-    return false
-  end
+  self.all.any? { |player| player.name == player_search_input }
 end
 
 def self.find_player(player_search_input)
