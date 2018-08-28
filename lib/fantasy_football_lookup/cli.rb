@@ -1,3 +1,4 @@
+require "pry"
 class CLI
   def call
     Scraper.scrape_players
@@ -7,6 +8,13 @@ class CLI
 
   def welcome
     puts "Welcome to FantasyFootballLookup. This Ruby gem uses data from www.FantasyPros.com."
+  end
+
+  def player_output(player)
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    puts "Name: #{player.name} | Team: #{player.team} | Position: #{player.position} | Bye Week: #{player.bye_week}"
+    puts "Rank: #{player.rank} | Position Rank: #{player.position_rank} | Best Rank: #{player.best_rank} | Worst Rank: #{player.worst_rank}"
+    puts "Average Rank: #{player.average_rank} | Average Draft Position: #{player.average_draft_position} | Average Draft Position vs. Rank: #{player.adp_vs_rank}"
   end
 
  def menu
@@ -19,17 +27,11 @@ class CLI
     if input == 'top-25' || input == 'top-50' || input == 'top-100'
         n = input.gsub("top-", "").to_i
         Player.all.first(n).each do |player|
-          puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-          puts "Name: #{player.name} | Team: #{player.team} | Position: #{player.position} | Bye Week: #{player.bye_week}"
-          puts "Rank: #{player.rank} | Position Rank: #{player.position_rank} | Best Rank: #{player.best_rank} | Worst Rank: #{player.worst_rank}"
-          puts "Average Rank: #{player.average_rank} | Average Draft Position: #{player.average_draft_position} | Average Draft Position vs. Rank: #{player.adp_vs_rank}"
+          player_output(player)
         end
     elsif input == "top-all"
       Player.all.each do |player|
-        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-        puts "Name: #{player.name} | Team: #{player.team} | Position: #{player.position} | Bye Week: #{player.bye_week}"
-        puts "Rank: #{player.rank} | Position Rank: #{player.position_rank} | Best Rank: #{player.best_rank} | Worst Rank: #{player.worst_rank}"
-        puts "Average Rank: #{player.average_rank} | Average Draft Position: #{player.average_draft_position} | Average Draft Position vs. Rank: #{player.adp_vs_rank}"
+        player_output(player)
       end
     elsif input == 'search'
       puts 'Please enter the name of the player you would like to search for:'
