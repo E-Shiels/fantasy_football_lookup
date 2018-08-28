@@ -1,4 +1,3 @@
-require "pry"
 class CLI
   def call
     Scraper.scrape_players
@@ -38,10 +37,7 @@ class CLI
       player_search_input = gets.strip
       @search_results = Player.find_player(player_search_input)
       if Player.player_exists?(player_search_input)
-      puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      puts "Name: #{@search_results[0].name} | Team: #{@search_results[0].team} | Position: #{@search_results[0].position} | Bye Week: #{@search_results[0].bye_week}"
-      puts "Rank: #{@search_results[0].rank} | Position Rank: #{@search_results[0].position_rank} | Best Rank: #{@search_results[0].best_rank} | Worst Rank: #{@search_results[0].worst_rank}"
-      puts "Average Rank: #{@search_results[0].average_rank} | Average Draft Position: #{@search_results[0].average_draft_position} | Average Draft Position vs. Rank: #{@search_results[0].adp_vs_rank}"
+        @search_results.each { |player| player_output(player)}
     else
       puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
       puts "No player was found with that name. Please check your spelling and capitalization, type search, and try again."
