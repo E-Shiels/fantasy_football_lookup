@@ -1,7 +1,6 @@
-require_relative "./player.rb"
 class CLI
   def call
-    Player.scrape_players
+    Scraper.scrape_players
     welcome
     menu
   end
@@ -43,7 +42,7 @@ class CLI
       puts "Average Rank: #{@search_results[0].average_rank} | Average Draft Position: #{@search_results[0].average_draft_position} | Average Draft Position vs. Rank: #{@search_results[0].adp_vs_rank}"
     else
       puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-      puts "No player was found with that name. Please check your spelling and capitalisation, type search, and try again."
+      puts "No player was found with that name. Please check your spelling and capitalization, type search, and try again."
     end
     elsif input == 'explain'
       puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
